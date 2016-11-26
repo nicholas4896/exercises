@@ -32,14 +32,13 @@ print "Truncating the file. Goodbye!"
 # target.truncate()
 
 print "Now I'm going to ask you for three lines."
-
 line1 = raw_input("line 1: ")
 line2 = raw_input("line 2: ")
 line3 = raw_input("line 3: ")
 
 print "I'm going to write these to the file. \n"
 
-target.write("%s\n%s\n%s") % (line1, line2, line3)
+target.write(line1 + "\n" + line2 + "\n" + line3 + "\n")
 target.close()
 
 # target.write(line1)
@@ -52,5 +51,5 @@ target.close()
 print "\tHere is your new file"
 target = open(filename)
 print target.read()
-print "And finally, we close it."
+# print "And finally, we close it."
 target.close()
